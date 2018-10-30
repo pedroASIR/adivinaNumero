@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Juego adivinar un número</title>
+    <style>
+        #form{
+            width: 20em; 
+            margin-left: 10em;
+        }
+        #btn-select{
+            width: auto;
+            margin-left: 10em;
+            margin-top: 10em;
+        }
+        #alertas{
+            margin-left: 10em;
+        }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="adivinar_numero.js"></script>
+</head>
+
+<body class="bg-warning">
+    <h1 class="display-1 text-center">¡Adivina el número!</h1>
+    <br />
+    <br />
+    <p id="parrafo" class="h3 text-center">Trate de adivinar el número que la máquina generará automáticamente.</p>
+    <div id='btn-select' class='input-group mb-3'>
+        <div class='input-group-prepend'>
+            <button id="start" class='btn btn-success' onclick="iniciar_juego()">Iniciar juego</button>
+        </div>
+        <select id="numIntentos">
+            <option id="opcion1" value="15">Fácil (15 intentos)</option>
+            <option id="opcion2" value="10">Intermedio (10 intentos)</option>
+            <option id="opcion3" value="5">Difícil (5 intentos)</option>
+        </select>
+    </div>
+    <br />
+
+    <div id="form" class="input-group mb-3">
+        <input id="userChoice" type="text" class="form-control" placeholder="Inserte un número...">
+        <button id="enviar" class="btn btn-dark">Enviar</button>
+    </div>
+    <div id="alertas">
+        <p id="mensaje"></p>
+        <p id="mostrarIntentos"></p>
+    </div>
+</body>
+
+</html>
