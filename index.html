@@ -6,13 +6,13 @@
     <title>Juego adivinar un número</title>
     <style>
         #form{
-            width: 20em; 
-            margin-left: 10em;
+            width: 20em; /*Anchura del div con id = form*/
+            margin-left: 10em; /*Tamaño del margen izquierdo*/
         }
         #btn-select{
             width: auto;
             margin-left: 10em;
-            margin-top: 10em;
+            margin-top: 10em; /*Tamaño del margen superior*/
         }
         #alertas{
             margin-left: 10em;
@@ -25,14 +25,18 @@
 </head>
 
 <body class="bg-warning">
+    <!--Titulo principal-->
     <h1 class="display-1 text-center">¡Adivina el número!</h1>
     <br />
     <br />
+    <!--Objetivo del juego-->
     <p id="parrafo" class="h3 text-center">Trate de adivinar el número que la máquina generará automáticamente.</p>
     <div id='btn-select' class='input-group mb-3'>
         <div class='input-group-prepend'>
+            <!--Botón de iniciar el juego-->
             <button id="start" class='btn btn-success' onclick="iniciar_juego()">Iniciar juego</button>
         </div>
+        <!--Selector de dificultad-->
         <select id="numIntentos">
             <option id="opcion1" value="15">Fácil (15 intentos)</option>
             <option id="opcion2" value="10">Intermedio (10 intentos)</option>
@@ -42,11 +46,15 @@
     <br />
 
     <div id="form" class="input-group mb-3">
+        <!--Input donde el jugador indicará el número-->
         <input id="userChoice" type="text" class="form-control" placeholder="Inserte un número...">
+        <!--Botón para enviar intento-->
         <button id="enviar" class="btn btn-dark">Enviar</button>
     </div>
     <div id="alertas">
-        <p id="mensaje"></p>
+        <!--Parrafo donde saldrá la pista sobre el número-->
+        <p id="mensaje"></p>ç
+        <!--Párrafo donde saldrá el número de intentos que lleva el jugador-->
         <p id="mostrarIntentos"></p>
     </div>
 </body>
